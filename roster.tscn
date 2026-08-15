@@ -1,0 +1,132 @@
+[gd_scene load_steps=3 format=3 uid="uid://qcs0bimsccd7"]
+
+[ext_resource type="Script" uid="uid://cddn5wojpep08" path="res://roster.gd" id="1_6uuar"]
+[ext_resource type="PackedScene" uid="uid://ctfc6hby7mk5s" path="res://playerinfo.tscn" id="2_id5u0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6uuar")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 1571.0
+offset_bottom = 769.0
+color = Color(0.701961, 0.270588, 0.0745098, 1)
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 137.0
+offset_right = 691.0
+offset_bottom = 537.0
+columns = 6
+column_titles_visible = true
+hide_root = true
+select_mode = 1
+
+[node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 102.0
+offset_top = 18.0
+offset_right = 227.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 40
+text = "Roster"
+
+[node name="RosterInfo" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 102.0
+offset_top = 77.0
+offset_right = 673.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 30
+text = "You currently have 0 open roster spots."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 135.0
+offset_right = 890.0
+offset_bottom = 533.0
+
+[node name="AutoSort" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Auto Sort"
+
+[node name="Up" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Up"
+
+[node name="Down" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Down"
+
+[node name="Info" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Info"
+
+[node name="Buy Out" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Buy Out"
+
+[node name="Release" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Release"
+
+[node name="BuyoutDialog" type="ConfirmationDialog" parent="."]
+oversampling_override = 1.0
+size = Vector2i(306, 100)
+
+[node name="BuyoutText" type="Label" parent="BuyoutDialog"]
+unique_name_in_owner = true
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 298.0
+offset_bottom = 51.0
+
+[node name="ReleaseDialog" type="ConfirmationDialog" parent="."]
+oversampling_override = 1.0
+size = Vector2i(306, 100)
+
+[node name="ReleaseText" type="Label" parent="ReleaseDialog"]
+unique_name_in_owner = true
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 298.0
+offset_bottom = 51.0
+
+[node name="PlayerInfo" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Player Info"
+position = Vector2i(10, 60)
+size = Vector2i(1680, 840)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="PlayerInfo" instance=ExtResource("2_id5u0")]
+
+[connection signal="item_selected" from="Tree" to="." method="_on_tree_item_selected"]
+[connection signal="pressed" from="VBoxContainer/AutoSort" to="." method="_on_auto_sort_pressed"]
+[connection signal="pressed" from="VBoxContainer/Up" to="." method="_on_up_pressed"]
+[connection signal="pressed" from="VBoxContainer/Down" to="." method="_on_down_pressed"]
+[connection signal="pressed" from="VBoxContainer/Info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="VBoxContainer/Buy Out" to="." method="_on_buy_out_pressed"]
+[connection signal="pressed" from="VBoxContainer/Release" to="." method="_on_release_pressed"]
+[connection signal="confirmed" from="BuyoutDialog" to="." method="_on_buyout_dialog_confirmed"]
+[connection signal="confirmed" from="ReleaseDialog" to="." method="_on_release_dialog_confirmed"]

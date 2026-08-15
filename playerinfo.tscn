@@ -1,0 +1,324 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctfc6hby7mk5s"]
+
+[ext_resource type="Script" uid="uid://m8p4lw5pwslo" path="res://playerinfo.gd" id="1_nvn4g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nvn4g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 1651.0
+offset_bottom = 869.0
+color = Color(0.701961, 0.270588, 0.0745098, 1)
+
+[node name="PlayerBox" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 35.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="PlayerName" type="RichTextLabel" parent="PlayerBox"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 40.0
+offset_right = 627.0
+offset_bottom = 76.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]LeBron James [/b]"
+
+[node name="First Team" type="Control" parent="PlayerBox"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PosAndTeam" type="RichTextLabel" parent="PlayerBox/First Team"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 372.0
+offset_bottom = 114.0
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[b]F - Miami Hedonists[/b]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerBox/First Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 210.0
+offset_bottom = 298.0
+theme_override_constants/separation = 2
+
+[node name="Height" type="Label" parent="PlayerBox/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Height: 6'9''"
+
+[node name="Weight" type="Label" parent="PlayerBox/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Weight: 250 lbs"
+
+[node name="Age" type="Label" parent="PlayerBox/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Age: 25"
+
+[node name="Born" type="Label" parent="PlayerBox/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Born: 1984 - USA"
+
+[node name="College" type="Label" parent="PlayerBox/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "College: None"
+
+[node name="Draft" type="Label" parent="PlayerBox/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Draft: 2003 - Round 1 (Pick 1) by CLE"
+
+[node name="Contract" type="Label" parent="PlayerBox/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Contract: $19.5M per year through 2014"
+
+[node name="RatingsBox" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 600.0
+offset_right = 640.0
+offset_bottom = 40.0
+
+[node name="Overall" type="RichTextLabel" parent="RatingsBox"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 40.0
+offset_right = 380.0
+offset_bottom = 76.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]Overall Rating: 80 [/b]"
+
+[node name="First Team" type="Control" parent="RatingsBox"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Potential" type="RichTextLabel" parent="RatingsBox/First Team"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 372.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Potential: 85"
+
+[node name="Physical" type="RichTextLabel" parent="RatingsBox/First Team"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 125.0
+offset_right = 474.0
+offset_bottom = 161.0
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[b]Physical[/b]"
+
+[node name="Shooting" type="RichTextLabel" parent="RatingsBox/First Team"]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 125.0
+offset_right = 734.0
+offset_bottom = 161.0
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[b]Shooting[/b]"
+
+[node name="Shooting2" type="RichTextLabel" parent="RatingsBox/First Team"]
+layout_mode = 0
+offset_left = 827.0
+offset_top = 125.0
+offset_right = 1089.0
+offset_bottom = 161.0
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[b]Skill[/b]"
+
+[node name="PhysicalBox" type="VBoxContainer" parent="RatingsBox/First Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 160.0
+offset_right = 241.0
+offset_bottom = 348.0
+theme_override_constants/separation = 2
+
+[node name="Hgt" type="Label" parent="RatingsBox/First Team/PhysicalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Height:"
+
+[node name="Str" type="Label" parent="RatingsBox/First Team/PhysicalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Strength:"
+
+[node name="Spd" type="Label" parent="RatingsBox/First Team/PhysicalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Speed:"
+
+[node name="Jmp" type="Label" parent="RatingsBox/First Team/PhysicalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Jumping:"
+
+[node name="End" type="Label" parent="RatingsBox/First Team/PhysicalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Endurance:"
+
+[node name="ShootingBox" type="VBoxContainer" parent="RatingsBox/First Team"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 160.0
+offset_right = 526.0
+offset_bottom = 348.0
+theme_override_constants/separation = 2
+
+[node name="Ins" type="Label" parent="RatingsBox/First Team/ShootingBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Inside:"
+
+[node name="Dnk" type="Label" parent="RatingsBox/First Team/ShootingBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Dunks/Layups:"
+
+[node name="FT" type="Label" parent="RatingsBox/First Team/ShootingBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Free Throws:"
+
+[node name="Threes" type="Label" parent="RatingsBox/First Team/ShootingBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Two Pointers:"
+
+[node name="Twos" type="Label" parent="RatingsBox/First Team/ShootingBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Three Pointers:"
+
+[node name="SkillBox" type="VBoxContainer" parent="RatingsBox/First Team"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 160.0
+offset_right = 836.0
+offset_bottom = 348.0
+theme_override_constants/separation = 2
+
+[node name="Blks" type="Label" parent="RatingsBox/First Team/SkillBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Blocks:"
+
+[node name="Stls" type="Label" parent="RatingsBox/First Team/SkillBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Steals:"
+
+[node name="Drb" type="Label" parent="RatingsBox/First Team/SkillBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Dribbling:"
+
+[node name="Pass" type="Label" parent="RatingsBox/First Team/SkillBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Passing:"
+
+[node name="Reb" type="Label" parent="RatingsBox/First Team/SkillBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Rebounding:"
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 376.0
+offset_right = 1483.0
+offset_bottom = 678.0
+columns = 6
+column_titles_visible = true
+hide_root = true
+select_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 700.0
+offset_right = 1461.0
+offset_bottom = 744.0
+theme_override_constants/separation = 8
+
+[node name="ChangeTable" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Change to Game Log"
+
+[node name="Button1" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Previous Player"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Next Player"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Trade For"
+
+[connection signal="pressed" from="HBoxContainer/ChangeTable" to="." method="_on_change_table_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]

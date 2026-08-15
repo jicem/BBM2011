@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://3cjod301y102"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 1571.0
+offset_bottom = 769.0
+color = Color(0.701961, 0.270588, 0.0745098, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 18.0
+offset_right = 213.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 40
+text = "Manual"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 90.0
+offset_right = 1048.0
+offset_bottom = 530.0
+bbcode_enabled = true
+text = "Basketball Manager 2011 is a sports management simulation game. You are the general manager of a basketball team, tasked with building your roster to compete for a championship while managing your finances.
+
+[center][u][b]Gameplay overview[/b][/u][/center]
+Each season of the game is divided into several phases:
+
+1: Preaseason. Players develop/age (i.e. their ratings change). Young players tend to get better, old players tend to get worse. You'll want to check your roster and auto sort your lineup in this phase.
+2: Regular season. Regular season games are played, at the pace you choose through the Play menu on the Standings page. It's recommended that you only play one day or one week at a time, as longer simulations will be much slower.
+3: Playoffs. Teams that made the playoffs (top 8 in each conference) progress through the bracket playing best-of-7 series until a champion emerges. Playoffs games can only be simulated on the Playoffs page.
+4: Draft. Similar to the NBA draft (although there is no lottery), teams are ordered from worst to best for two rounds. You can play through each round on the Draft page.
+5: Free agency. Contracts expire. For players on your team, you will have the chance to negotiate a new contract with each player whose contract expires. Otherwise, players with expiring contracts become free agents. Once you're finished with your signings, you'll be able to advance to the next season from the Free Agents page, starting the phase cycle over again.
+
+[center][u][b]League rules[/b][/u][/center]
+The league rules are generally modeled on those the NBA had during the 2010-2011 season, though many, many liberties have been taken.
+
+[b]Salary cap[/b]
+The salary cap is $90 million. This is a soft cap, in the sense that even if you are over the salary cap, you can still:
+
+▶️ Sign your draft picks
+▶️ Re-sign your current players
+▶️ Sign free agents to minimum contracts ($500k)
+
+[b]Contracts[/b]
+The maximum contract amount is $20 million per year and the maximum contract length is 5 years.
+
+The minimum contract amount is $500 thousand per year and the minimum contract length is 1 year (or, until the end of the season, if the season is already in progress).
+
+When a contract expires, you have the opportunity to negotiate a new contract with the player. If you don't come to an agreement, the player becomes a free agent. This is important because, based on the salary cap rules, you can go over the cap to resign your own players but you can't go over the cap to sign a free agent.
+
+[b]Roster[/b]
+The maximum roster size is 15. You can never exceed this, except during the draft. But right after that, you'll have to release or buy out enough players to get under the limit.
+
+The minimum roster size is 5. You must be above this limit to play games.
+
+[center][u][b]Player ratings[/b][/u][/center]
+Player ratings for a variety of categories (shooting, rebounding, passing, dribbling, etc) are on a scale from 0-100. Roughly, the overall (average) player ratings mean:
+
+90s: All-time great
+80s: MVP candidate
+70s: All League candidate
+60s: Good starter
+50s: Top role player
+40s: Normal role player
+30s and lower: Bench
+
+However, the overall ratings aren't a guarantee of performance. The particular mix of ratings plays into success, as do a player's teammates.
+
+The original version of this game can be found at [url]https://www.basketball-gm.com/old/[/url]. Credit Jeremy Scheff (dumbmatter)"

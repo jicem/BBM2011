@@ -1,0 +1,762 @@
+[gd_scene load_steps=2 format=3 uid="uid://chu8qfaopw5em"]
+
+[ext_resource type="Script" uid="uid://duh202lh2e81m" path="res://awards.gd" id="1_m1qy7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m1qy7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 1651.0
+offset_bottom = 869.0
+color = Color(0.701961, 0.270588, 0.0745098, 1)
+
+[node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 40.0
+offset_right = 338.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 40
+text = "Season Awards"
+
+[node name="BestRecord" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 60.0
+offset_right = 40.0
+offset_bottom = 100.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BestRecord"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 82.0
+offset_right = 204.0
+offset_bottom = 118.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]Best Record[/b]"
+
+[node name="EastWinner" type="Label" parent="BestRecord"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 115.0
+offset_right = 248.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 26
+text = "East: CHI (62-20)"
+
+[node name="WestWinner" type="Label" parent="BestRecord"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 149.0
+offset_right = 260.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 26
+text = "West: SAS (61-21)"
+
+[node name="MVP" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 180.0
+offset_right = 40.0
+offset_bottom = 220.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MVP"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 82.0
+offset_right = 333.0
+offset_bottom = 118.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]Most Valuable Player[/b]"
+
+[node name="MVP" type="Label" parent="MVP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 115.0
+offset_right = 271.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 26
+text = "Derrick Rose (CHI)"
+
+[node name="MVPStats" type="Label" parent="MVP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 149.0
+offset_right = 365.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 26
+text = "25.0 pts, 4.1 rebs, 7.7 asts"
+
+[node name="DPOY" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 300.0
+offset_right = 40.0
+offset_bottom = 340.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DPOY"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 82.0
+offset_right = 439.0
+offset_bottom = 118.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]Defensive Player of the Year[/b]"
+
+[node name="DPOY" type="Label" parent="DPOY"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 115.0
+offset_right = 315.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 26
+text = "Dwight Howard (ORL)"
+
+[node name="DPOYStats" type="Label" parent="DPOY"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 149.0
+offset_right = 369.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 26
+text = "14.1 rebs, 1.4 stls, 2.4 blks"
+
+[node name="SMOTY" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 420.0
+offset_right = 40.0
+offset_bottom = 460.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SMOTY"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 82.0
+offset_right = 333.0
+offset_bottom = 118.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]Sixth Man of the Year[/b]"
+
+[node name="SMOTY" type="Label" parent="SMOTY"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 115.0
+offset_right = 298.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 26
+text = "James Harden (OKC)"
+
+[node name="SMOTYStats" type="Label" parent="SMOTY"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 149.0
+offset_right = 365.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 26
+text = "16.8 pts, 4.1 rebs, 3.7 asts"
+
+[node name="ROTY" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 540.0
+offset_right = 40.0
+offset_bottom = 580.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ROTY"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 82.0
+offset_right = 333.0
+offset_bottom = 118.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]Rookie of the Year[/b]"
+
+[node name="ROTY" type="Label" parent="ROTY"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 115.0
+offset_right = 273.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 26
+text = "Blake Griffin (LAC)"
+
+[node name="ROTYStats" type="Label" parent="ROTY"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 149.0
+offset_right = 379.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 26
+text = "22.5 pts, 12.1 rebs, 3.8 asts"
+
+[node name="AllNBA" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 350.0
+offset_right = 390.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllNBA"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 40.0
+offset_right = 335.0
+offset_bottom = 76.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]All League Team[/b]"
+
+[node name="First Team" type="Control" parent="AllNBA"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllNBA/First Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]First Team[/u]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AllNBA/First Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 210.0
+offset_bottom = 298.0
+theme_override_constants/separation = 2
+
+[node name="AllNBA1" type="Label" parent="AllNBA/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "LeBron James (MIA)"
+
+[node name="AllNBA2" type="Label" parent="AllNBA/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 2"
+
+[node name="AllNBA3" type="Label" parent="AllNBA/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 3"
+
+[node name="AllNBA4" type="Label" parent="AllNBA/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 4"
+
+[node name="AllNBA5" type="Label" parent="AllNBA/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 5"
+
+[node name="Second Team" type="Control" parent="AllNBA"]
+anchors_preset = 0
+offset_top = 200.0
+offset_right = 40.0
+offset_bottom = 240.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllNBA/Second Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 116.0
+offset_right = 288.0
+offset_bottom = 152.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Second Team[/u]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AllNBA/Second Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 150.0
+offset_right = 210.0
+offset_bottom = 190.0
+theme_override_constants/separation = 2
+
+[node name="AllNBA6" type="Label" parent="AllNBA/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 1"
+
+[node name="AllNBA7" type="Label" parent="AllNBA/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 2"
+
+[node name="AllNBA8" type="Label" parent="AllNBA/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 3"
+
+[node name="AllNBA9" type="Label" parent="AllNBA/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 4"
+
+[node name="AllNBA10" type="Label" parent="AllNBA/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 5"
+
+[node name="Third Team" type="Control" parent="AllNBA"]
+anchors_preset = 0
+offset_top = 440.0
+offset_right = 40.0
+offset_bottom = 480.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllNBA/Third Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 116.0
+offset_right = 288.0
+offset_bottom = 152.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Third Team[/u]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AllNBA/Third Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 150.0
+offset_right = 210.0
+offset_bottom = 190.0
+theme_override_constants/separation = 2
+
+[node name="AllNBA11" type="Label" parent="AllNBA/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 1"
+
+[node name="AllNBA12" type="Label" parent="AllNBA/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 2"
+
+[node name="AllNBA13" type="Label" parent="AllNBA/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 3"
+
+[node name="AllNBA14" type="Label" parent="AllNBA/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 4"
+
+[node name="AllNBA15" type="Label" parent="AllNBA/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 5"
+
+[node name="AllDefensive" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 700.0
+offset_right = 740.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllDefensive"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 40.0
+offset_right = 363.0
+offset_bottom = 76.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]All Defensive Team[/b]"
+
+[node name="First Team" type="Control" parent="AllDefensive"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllDefensive/First Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]First Team[/u]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AllDefensive/First Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 210.0
+offset_bottom = 298.0
+theme_override_constants/separation = 2
+
+[node name="AllDefensive1" type="Label" parent="AllDefensive/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "LeBron James (MIA)"
+
+[node name="AllDefensive2" type="Label" parent="AllDefensive/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 2"
+
+[node name="AllDefensive3" type="Label" parent="AllDefensive/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 3"
+
+[node name="AllDefensive4" type="Label" parent="AllDefensive/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 4"
+
+[node name="AllDefensive5" type="Label" parent="AllDefensive/First Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 5"
+
+[node name="Second Team" type="Control" parent="AllDefensive"]
+anchors_preset = 0
+offset_top = 200.0
+offset_right = 40.0
+offset_bottom = 240.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllDefensive/Second Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 116.0
+offset_right = 288.0
+offset_bottom = 152.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Second Team[/u]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AllDefensive/Second Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 150.0
+offset_right = 210.0
+offset_bottom = 190.0
+theme_override_constants/separation = 2
+
+[node name="AllDefensive6" type="Label" parent="AllDefensive/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 1"
+
+[node name="AllDefensive7" type="Label" parent="AllDefensive/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 2"
+
+[node name="AllDefensive8" type="Label" parent="AllDefensive/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 3"
+
+[node name="AllDefensive9" type="Label" parent="AllDefensive/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 4"
+
+[node name="AllDefensive10" type="Label" parent="AllDefensive/Second Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 5"
+
+[node name="Third Team" type="Control" parent="AllDefensive"]
+anchors_preset = 0
+offset_top = 440.0
+offset_right = 40.0
+offset_bottom = 480.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllDefensive/Third Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 116.0
+offset_right = 288.0
+offset_bottom = 152.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Third Team[/u]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AllDefensive/Third Team"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 150.0
+offset_right = 210.0
+offset_bottom = 190.0
+theme_override_constants/separation = 2
+
+[node name="AllDefensive11" type="Label" parent="AllDefensive/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 1"
+
+[node name="AllDefensive12" type="Label" parent="AllDefensive/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 2"
+
+[node name="AllDefensive13" type="Label" parent="AllDefensive/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 3"
+
+[node name="AllDefensive14" type="Label" parent="AllDefensive/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 4"
+
+[node name="AllDefensive15" type="Label" parent="AllDefensive/Third Team/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 5"
+
+[node name="Leaders" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1050.0
+offset_right = 1090.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaders"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 40.0
+offset_right = 363.0
+offset_bottom = 76.0
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]Season Leaders[/b]"
+
+[node name="Points" type="Control" parent="Leaders"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaders/Points"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Points[/u]"
+
+[node name="PPG" type="Label" parent="Leaders/Points"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 350.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 26
+text = "LeBron James (27.1 ppg)"
+
+[node name="Rebounds" type="Control" parent="Leaders"]
+anchors_preset = 0
+offset_top = 100.0
+offset_right = 40.0
+offset_bottom = 140.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaders/Rebounds"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Rebounds[/u]"
+
+[node name="RPG" type="Label" parent="Leaders/Rebounds"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 350.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 26
+text = "Dwight Howard (14.1 rpg)"
+
+[node name="Assists" type="Control" parent="Leaders"]
+anchors_preset = 0
+offset_top = 200.0
+offset_right = 40.0
+offset_bottom = 240.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaders/Assists"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Assists
+[/u]"
+
+[node name="APG" type="Label" parent="Leaders/Assists"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 350.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 26
+text = "Derrick Rose (7.7 apg)"
+
+[node name="Steals" type="Control" parent="Leaders"]
+anchors_preset = 0
+offset_top = 300.0
+offset_right = 40.0
+offset_bottom = 340.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaders/Steals"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Steals[/u]"
+
+[node name="SPG" type="Label" parent="Leaders/Steals"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 350.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 26
+text = "LeBron James (1.9 spg)"
+
+[node name="Blocks" type="Control" parent="Leaders"]
+anchors_preset = 0
+offset_top = 400.0
+offset_right = 40.0
+offset_bottom = 440.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaders/Blocks"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Blocks[/u]"
+
+[node name="BPG" type="Label" parent="Leaders/Blocks"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 350.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 26
+text = "Dwight Howard (2.4 bpg)"
+
+[node name="Turnovers" type="Control" parent="Leaders"]
+anchors_preset = 0
+offset_top = 500.0
+offset_right = 40.0
+offset_bottom = 540.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaders/Turnovers"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Turnovers[/u]"
+
+[node name="TOPG" type="Label" parent="Leaders/Turnovers"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 350.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 26
+text = "Russell Westbrook (3.9 topg)"
+
+[node name="Minutes" type="Control" parent="Leaders"]
+anchors_preset = 0
+offset_top = 600.0
+offset_right = 40.0
+offset_bottom = 640.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaders/Minutes"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 78.0
+offset_right = 259.0
+offset_bottom = 114.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[u]Minutes[/u]"
+
+[node name="MPG" type="Label" parent="Leaders/Minutes"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 350.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 26
+text = "LeBron James (30.1 mpg)"

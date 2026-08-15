@@ -1,0 +1,221 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2vqpqebf7ylu"]
+
+[ext_resource type="Script" uid="uid://cysc8rk57mypa" path="res://finances.gd" id="1_vt0mc"]
+[ext_resource type="PackedScene" uid="uid://qcs0bimsccd7" path="res://roster.tscn" id="2_dlmu5"]
+[ext_resource type="PackedScene" uid="uid://pe2upofw0yo5" path="res://teamhis.tscn" id="3_1pxqs"]
+[ext_resource type="PackedScene" uid="uid://3cjod301y102" path="res://manual.tscn" id="4_rnx5h"]
+[ext_resource type="PackedScene" uid="uid://dd4icacvwndo3" path="res://drafthis.tscn" id="5_dlmu5"]
+[ext_resource type="PackedScene" uid="uid://bkdr3yxoc8rx7" path="res://tradescreen.tscn" id="6_1pxqs"]
+
+[sub_resource type="Theme" id="Theme_1psv5"]
+default_font_size = 24
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vt0mc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 1625.0
+offset_bottom = 927.0
+color = Color(0.701961, 0.270588, 0.0745098, 1)
+
+[node name="MenuBar" type="MenuBar" parent="."]
+offset_left = 460.0
+offset_top = 6.0
+offset_right = 1110.0
+offset_bottom = 69.0
+theme_override_constants/h_separation = 20
+theme_override_font_sizes/font_size = 40
+
+[node name="Game" type="PopupMenu" parent="MenuBar"]
+title = "Game"
+theme_override_font_sizes/font_size = 30
+
+[node name="Play" type="PopupMenu" parent="MenuBar"]
+title = "Play"
+theme_override_font_sizes/font_size = 30
+
+[node name="Team" type="PopupMenu" parent="MenuBar"]
+title = "Team"
+theme_override_font_sizes/font_size = 30
+
+[node name="Players" type="PopupMenu" parent="MenuBar"]
+title = "Players"
+theme_override_font_sizes/font_size = 30
+
+[node name="Help" type="PopupMenu" parent="MenuBar"]
+title = "Help"
+theme_override_font_sizes/font_size = 30
+
+[node name="Label" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 46.0
+offset_right = 226.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 50
+text = "League"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 601.0
+offset_top = 129.0
+offset_right = 998.0
+offset_bottom = 198.0
+theme_override_font_sizes/font_size = 50
+text = "League Finances"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 579.0
+offset_top = 187.0
+offset_right = 1014.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 40
+text = "Salary Cap: $90 million"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_top = 120.0
+offset_right = 198.0
+offset_bottom = 183.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "History"
+
+[node name="Button1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Standings"
+
+[node name="Playoffs" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Playoffs"
+
+[node name="Finances" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Finances"
+
+[node name="Draft" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Draft"
+
+[node name="FreeAgents" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Free Agents"
+
+[node name="Ratings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Player Ratings"
+
+[node name="PlayerStats" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Player Stats"
+
+[node name="TeamStats" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Team Stats"
+
+[node name="GameLog" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Game Log"
+
+[node name="Roster" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Team Roster"
+position = Vector2i(10, 60)
+size = Vector2i(950, 600)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="Roster" instance=ExtResource("2_dlmu5")]
+offset_right = 96.0
+offset_bottom = 34.0
+
+[node name="History" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Team History"
+position = Vector2i(10, 60)
+size = Vector2i(800, 600)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="History" instance=ExtResource("3_1pxqs")]
+offset_right = -750.0
+offset_bottom = -600.0
+
+[node name="Teams" type="Tree" parent="."]
+offset_left = 335.0
+offset_top = 268.0
+offset_right = 1294.0
+offset_bottom = 808.0
+columns = 6
+column_titles_visible = true
+hide_root = true
+select_mode = 1
+
+[node name="Manual" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Team History"
+position = Vector2i(10, 60)
+size = Vector2i(1100, 550)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="Manual" instance=ExtResource("4_rnx5h")]
+
+[node name="DraftHis" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Draft History"
+position = Vector2i(10, 60)
+size = Vector2i(950, 600)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="DraftHis" instance=ExtResource("5_dlmu5")]
+
+[node name="Trade" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Draft History"
+position = Vector2i(10, 60)
+size = Vector2i(1500, 770)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="Trade" instance=ExtResource("6_1pxqs")]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(572, 139)
+theme = SubResource("Theme_1psv5")
+dialog_text = "Your team has more than 15 players. Please buy
+out or release players before continuing."
+
+[connection signal="id_pressed" from="MenuBar/Game" to="." method="_on_game_id_pressed"]
+[connection signal="id_pressed" from="MenuBar/Play" to="." method="_on_play_id_pressed"]
+[connection signal="id_pressed" from="MenuBar/Team" to="." method="_on_team_id_pressed"]
+[connection signal="id_pressed" from="MenuBar/Players" to="." method="_on_players_id_pressed"]
+[connection signal="id_pressed" from="MenuBar/Help" to="." method="_on_help_id_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Playoffs" to="." method="_on_playoffs_pressed"]
+[connection signal="pressed" from="VBoxContainer/Draft" to="." method="_on_draft_pressed"]
+[connection signal="pressed" from="VBoxContainer/FreeAgents" to="." method="_on_free_agents_pressed"]
+[connection signal="pressed" from="VBoxContainer/Ratings" to="." method="_on_ratings_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlayerStats" to="." method="_on_player_stats_pressed"]
+[connection signal="pressed" from="VBoxContainer/TeamStats" to="." method="_on_team_stats_pressed"]
+[connection signal="pressed" from="VBoxContainer/GameLog" to="." method="_on_game_log_pressed"]
+[connection signal="item_selected" from="Teams" to="." method="_on_free_agents_item_selected"]

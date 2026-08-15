@@ -1,0 +1,118 @@
+[gd_scene load_steps=4 format=3 uid="uid://bup7xq6xol4h2"]
+
+[ext_resource type="Script" uid="uid://callbykhikqwy" path="res://titlescreen.gd" id="1_e7n6l"]
+[ext_resource type="Texture2D" uid="uid://cm6kki5mjalbn" path="res://basketball.png" id="2_djxvj"]
+[ext_resource type="PackedScene" uid="uid://3cjod301y102" path="res://manual.tscn" id="3_2bjoa"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_e7n6l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 1640.0
+offset_bottom = 939.0
+color = Color(0.701961, 0.270588, 0.0745098, 1)
+
+[node name="TitleText" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 643.0
+
+[node name="Title" type="Label" parent="TitleText"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 61.0
+offset_right = 1449.0
+offset_bottom = 198.0
+theme_override_font_sizes/font_size = 100
+text = "Basketball Manager 2011"
+
+[node name="LinkButton" type="LinkButton" parent="TitleText"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 794.0
+offset_right = 1147.0
+offset_bottom = 863.0
+theme_override_font_sizes/font_size = 50
+text = "More games from jicem"
+uri = "https://jicem.itch.io"
+
+[node name="Button" type="Button" parent="TitleText"]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 247.0
+offset_right = 1475.0
+offset_bottom = 324.0
+theme_override_font_sizes/font_size = 50
+text = "Create League (Real Roster)"
+
+[node name="Button2" type="Button" parent="TitleText"]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 352.0
+offset_right = 1481.0
+offset_bottom = 429.0
+theme_override_font_sizes/font_size = 50
+text = "Create League (Fake Roster)"
+
+[node name="Load" type="Button" parent="TitleText"]
+layout_mode = 0
+offset_left = 974.0
+offset_top = 461.0
+offset_right = 1286.0
+offset_bottom = 538.0
+theme_override_font_sizes/font_size = 50
+text = "Load League"
+
+[node name="Manual" type="Button" parent="TitleText"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 570.0
+offset_right = 1288.0
+offset_bottom = 647.0
+theme_override_font_sizes/font_size = 50
+text = "View Manual"
+
+[node name="Quit" type="Button" parent="TitleText"]
+layout_mode = 0
+offset_left = 1066.0
+offset_top = 677.0
+offset_right = 1179.0
+offset_bottom = 754.0
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="Basketball" type="Sprite2D" parent="TitleText"]
+position = Vector2(501, 497)
+texture = ExtResource("2_djxvj")
+
+[node name="LoadingText" type="Label" parent="."]
+visible = false
+offset_left = 377.0
+offset_top = 399.0
+offset_right = 1192.0
+offset_bottom = 468.0
+theme_override_font_sizes/font_size = 50
+text = "Generating players for 30 teams..."
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Manual" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Team History"
+position = Vector2i(10, 60)
+size = Vector2i(1100, 550)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="Manual" instance=ExtResource("3_2bjoa")]
+
+[connection signal="pressed" from="TitleText/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TitleText/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TitleText/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="TitleText/Manual" to="." method="_on_manual_pressed"]
+[connection signal="pressed" from="TitleText/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

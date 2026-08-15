@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd4icacvwndo3"]
+
+[ext_resource type="Script" uid="uid://dktb7adogsu44" path="res://drafthis.gd" id="1_3380c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3380c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 1571.0
+offset_bottom = 769.0
+color = Color(0.701961, 0.270588, 0.0745098, 1)
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 143.0
+offset_right = 691.0
+offset_bottom = 556.0
+columns = 6
+column_titles_visible = true
+hide_root = true
+select_mode = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 18.0
+offset_right = 227.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 40
+text = "Draft History"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 74.0
+offset_right = 537.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 40
+text = "Season:"
+
+[node name="SeasonDropdown" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 84.0
+offset_right = 300.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 30

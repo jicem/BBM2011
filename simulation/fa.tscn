@@ -1,0 +1,248 @@
+[gd_scene load_steps=9 format=3 uid="uid://gmcefpt4odhx"]
+
+[ext_resource type="Script" uid="uid://buf367q6ynff" path="res://simulation/fa.gd" id="1_wjp8i"]
+[ext_resource type="PackedScene" uid="uid://qcs0bimsccd7" path="res://roster.tscn" id="2_j3ved"]
+[ext_resource type="PackedScene" uid="uid://pe2upofw0yo5" path="res://teamhis.tscn" id="3_cd1iq"]
+[ext_resource type="PackedScene" uid="uid://c84v3rypjddfl" path="res://negotiations.tscn" id="4_s614i"]
+[ext_resource type="PackedScene" uid="uid://dt7f04xvf47wb" path="res://fanegotiations.tscn" id="5_j3ved"]
+[ext_resource type="PackedScene" uid="uid://ctfc6hby7mk5s" path="res://playerinfo.tscn" id="6_cd1iq"]
+[ext_resource type="PackedScene" uid="uid://3cjod301y102" path="res://manual.tscn" id="7_em4de"]
+
+[sub_resource type="Theme" id="Theme_cd1iq"]
+default_font_size = 24
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wjp8i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 1625.0
+offset_bottom = 927.0
+color = Color(0.701961, 0.270588, 0.0745098, 1)
+
+[node name="MenuBar" type="MenuBar" parent="."]
+offset_left = 460.0
+offset_top = 6.0
+offset_right = 1110.0
+offset_bottom = 69.0
+theme_override_constants/h_separation = 20
+theme_override_font_sizes/font_size = 40
+
+[node name="Game" type="PopupMenu" parent="MenuBar"]
+title = "Game"
+theme_override_font_sizes/font_size = 30
+
+[node name="Play" type="PopupMenu" parent="MenuBar"]
+title = "Play"
+theme_override_font_sizes/font_size = 30
+
+[node name="Team" type="PopupMenu" parent="MenuBar"]
+title = "Team"
+theme_override_font_sizes/font_size = 30
+
+[node name="Players" type="PopupMenu" parent="MenuBar"]
+title = "Players"
+theme_override_font_sizes/font_size = 30
+
+[node name="Help" type="PopupMenu" parent="MenuBar"]
+title = "Help"
+theme_override_font_sizes/font_size = 30
+
+[node name="Label" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 46.0
+offset_right = 226.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 50
+text = "League"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 535.0
+offset_top = 129.0
+offset_right = 1052.0
+offset_bottom = 198.0
+theme_override_font_sizes/font_size = 50
+text = "Available Free Agents"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_top = 120.0
+offset_right = 198.0
+offset_bottom = 183.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "History"
+
+[node name="Button1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Standings"
+
+[node name="Playoffs" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Playoffs"
+
+[node name="Finances" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Finances"
+
+[node name="Draft" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Draft"
+
+[node name="FreeAgents" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Free Agents"
+
+[node name="Ratings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Player Ratings"
+
+[node name="PlayerStats" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Player Stats"
+
+[node name="TeamStats" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Team Stats"
+
+[node name="GameLog" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Game Log"
+
+[node name="Roster" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Team Roster"
+position = Vector2i(10, 60)
+size = Vector2i(950, 600)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="Roster" instance=ExtResource("2_j3ved")]
+offset_right = 96.0
+offset_bottom = 34.0
+
+[node name="History" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Team History"
+position = Vector2i(10, 60)
+size = Vector2i(800, 600)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="History" instance=ExtResource("3_cd1iq")]
+offset_right = -750.0
+offset_bottom = -600.0
+
+[node name="Negotiations" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Player Signing"
+position = Vector2i(10, 60)
+size = Vector2i(800, 600)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="Negotiations" instance=ExtResource("4_s614i")]
+
+[node name="PlayerSigning" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Player Signing"
+position = Vector2i(10, 60)
+size = Vector2i(800, 600)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="PlayerSigning" instance=ExtResource("5_j3ved")]
+
+[node name="FreeAgents" type="Tree" parent="."]
+offset_left = 335.0
+offset_top = 216.0
+offset_right = 1294.0
+offset_bottom = 756.0
+columns = 6
+column_titles_visible = true
+hide_root = true
+select_mode = 1
+
+[node name="SignPlayer" type="Button" parent="."]
+offset_left = 663.0
+offset_top = 780.0
+offset_right = 883.0
+offset_bottom = 843.0
+theme_override_font_sizes/font_size = 40
+text = "Sign Player"
+
+[node name="PlayerInfo" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Player Info"
+position = Vector2i(10, 60)
+size = Vector2i(1680, 840)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="PlayerInfo" instance=ExtResource("6_cd1iq")]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(508, 139)
+theme = SubResource("Theme_cd1iq")
+dialog_text = "Your roster is full. You must release or buy
+out a player before signing any more."
+
+[node name="SeasonText" type="Label" parent="."]
+visible = false
+offset_left = 411.0
+offset_top = 771.0
+offset_right = 1141.0
+offset_bottom = 840.0
+theme_override_font_sizes/font_size = 50
+text = "Simulating through offseason..."
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="Manual" type="Popup" parent="."]
+oversampling_override = 1.0
+title = "Team History"
+position = Vector2i(10, 60)
+size = Vector2i(1100, 550)
+unresizable = false
+borderless = false
+minimize_disabled = false
+
+[node name="Control" parent="Manual" instance=ExtResource("7_em4de")]
+
+[connection signal="id_pressed" from="MenuBar/Game" to="." method="_on_game_id_pressed"]
+[connection signal="id_pressed" from="MenuBar/Play" to="." method="_on_play_id_pressed"]
+[connection signal="id_pressed" from="MenuBar/Team" to="." method="_on_team_id_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Playoffs" to="." method="_on_playoffs_pressed"]
+[connection signal="pressed" from="VBoxContainer/Finances" to="." method="_on_finances_pressed"]
+[connection signal="pressed" from="VBoxContainer/Draft" to="." method="_on_draft_pressed"]
+[connection signal="pressed" from="VBoxContainer/Ratings" to="." method="_on_ratings_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlayerStats" to="." method="_on_player_stats_pressed"]
+[connection signal="pressed" from="VBoxContainer/TeamStats" to="." method="_on_team_stats_pressed"]
+[connection signal="pressed" from="VBoxContainer/GameLog" to="." method="_on_game_log_pressed"]
+[connection signal="close_requested" from="Negotiations" to="." method="_on_negotiations_close_requested"]
+[connection signal="close_requested" from="PlayerSigning" to="." method="_on_negotiations_close_requested"]
+[connection signal="item_selected" from="FreeAgents" to="." method="_on_free_agents_item_selected"]
+[connection signal="pressed" from="SignPlayer" to="." method="_on_sign_player_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
