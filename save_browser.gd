@@ -7,7 +7,7 @@ signal cancelled
 @onready var save_list = $MarginContainer/VBoxContainer/SaveList
 @onready var save_button = %SaveButton
 
-const SAVE_FOLDER = "res://data/savefiles"
+const SAVE_FOLDER = "user://saves"
 
 func _ready():
 	DirAccess.make_dir_recursive_absolute(SAVE_FOLDER)
