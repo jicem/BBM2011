@@ -49,24 +49,26 @@ func _on_load_pressed():
 
 
 func load_league(save_name: String):
-	# Load the database
-	database.import_from_json("%s%s.json" % [save_folder, save_name])
-
-	# Load the global state
-	var file = FileAccess.open(
-		"%s%s.state.json" % [save_folder, save_name],
-		FileAccess.READ
-	)
-
-	if file == null:
-		push_error("Couldn't load save state.")
+	var db_path := "user://saves/%s.json" % save_name
+	var state_path := "user://saves/%s.state.json" % save_name
+	if not FileAccess.file_exists(db_path):
+		print("Save database not found: ", db_path)
 		return
-
-	var state = JSON.parse_string(file.get_as_text())
+	if not FileAccess.file_exists(state_path):
+		print("Save state not found: ", state_path)
+		return
+	database.import_from_json(db_path)
+	var file := FileAccess.open(state_path, FileAccess.READ)
+	if file == null:
+		print("Could not open state file.")
+		return
+	var state_text := file.get_as_text()
 	file.close()
-
+	var state = JSON.parse_string(state_text)
+	if state == null:
+		print("Could not parse save state.")
+		return
 	Global.load_save_state(state)
-
 	get_tree().change_scene_to_file("res://simulation/main.tscn")
 
 

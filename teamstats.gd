@@ -506,15 +506,28 @@ func open_load_browser():
 	)
 	load_browser.popup_centered()
 	
-func _load_league(save_name):
-	db.import_from_json("res://data/savefiles/%s.json" % save_name)
-	var file = FileAccess.open(
-		"res://data/savefiles/%s.json" % save_name,
-		FileAccess.READ
-	)
-	var state = JSON.parse_string(file.get_as_text())
+func _load_league(save_name: String):
+	var db_path := "user://saves/%s.json" % save_name
+	var state_path := "user://saves/%s.state.json" % save_name
+	if not FileAccess.file_exists(db_path):
+		print("Save database not found: ", db_path)
+		return
+	if not FileAccess.file_exists(state_path):
+		print("Save state not found: ", state_path)
+		return
+	db.import_from_json(db_path)
+	var file := FileAccess.open(state_path, FileAccess.READ)
+	if file == null:
+		print("Could not open state file.")
+		return
+	var state_text := file.get_as_text()
 	file.close()
+	var state = JSON.parse_string(state_text)
+	if state == null:
+		print("Could not parse save state.")
+		return
 	Global.load_save_state(state)
+	print("League loaded: ", save_name)
 	get_tree().reload_current_scene()
 
 func open_save_browser():
@@ -527,17 +540,28 @@ func open_save_browser():
 	)
 	save_browser.popup_centered()
 	
-func _save_league(save_name):
-	db.export_to_json("res://data/savefiles/%s.json" % save_name)
+func _save_league(save_name: String):
+	DirAccess.make_dir_recursive_absolute("user://saves")
+	var db_path := "user://saves/%s.json" % save_name
+	var state_path := "user://saves/%s.state.json" % save_name
+	db.export_to_json(db_path)
 	var save_state = Global.get_save_state()
-	var file = FileAccess.open(
-		"res://data/savefiles/%s.state.json" % save_name,
+	var file := FileAccess.open(
+		state_path,
 		FileAccess.WRITE
 	)
-	file.store_string(JSON.stringify(save_state))
+	if file == null:
+		print("Could not create save-state file.")
+		return
+	file.store_string(
+		JSON.stringify(save_state)
+	)
 	file.close()
 	print("Database and game state saved as ", save_name)
-	save_browser.queue_free()
+	if is_instance_valid(save_browser):
+		save_browser.queue_free()
+		save_browser = null
+
 
 func _on_help_id_pressed(id):
 	match id:
